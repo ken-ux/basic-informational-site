@@ -1,0 +1,16 @@
+{
+  "name": "basic-informational-site",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "This is a basic informational site with a home, about, and contact page. There's also a 404 page when serving a page that doesn't exist. This project was meant as practice for creating a Node.js server file and serving the right page according to the URL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
