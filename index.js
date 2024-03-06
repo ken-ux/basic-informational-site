@@ -1,10 +1,10 @@
-const http = require("node:http");
-const fs = require("fs");
+import { createServer } from "node:http";
+import { readFile } from "fs";
 
 const hostname = "localhost";
 const port = 8080;
 
-const server = http.createServer((req, res) => {
+const server = createServer((req, res) => {
   let filePath = `.${req.url}.html`;
   if (req.url === "/") {
     filePath = "./index.html";
@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
     filePath = "./404.html";
   }
   res.writeHead(200, { "Content-Type": "text/html" });
-  fs.readFile(filePath, (err, data) => {
+  readFile(filePath, (err, data) => {
     if (err) {
       console.log(err);
       res.end();
